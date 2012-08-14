@@ -8,6 +8,18 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
+   <Page.Resources>
+      <Storyboard x:Name="_noteAnimation">
+         <DoubleAnimation Storyboard.TargetName="Note"
+                  Storyboard.TargetProperty="(Canvas.Left)"
+                  To="0.0" 
+                  Duration="0:0:5" 
+                  AutoReverse="True" 
+                  RepeatBehavior="Forever"/>
+      </Storyboard>
+
+   </Page.Resources>
+
    <Grid Background="White">
       <Grid.RowDefinitions>
          <RowDefinition/>
@@ -44,18 +56,17 @@
          <Canvas Grid.Row="7" Grid.ColumnSpan="3" Background="Black"/>
          <Canvas Grid.Row="9" Grid.ColumnSpan="3" Background="Black"/>
          <Canvas Grid.RowSpan="11" Grid.Column="1" Background="Blue"/>
-         <Canvas Grid.RowSpan="11" Grid.ColumnSpan="3">
-            <Rectangle Width="10" Height="10" Fill="Red">
-               <Rectangle.Style>
-                  <Style TargetType="Rectangle">
-                     <Setter Property="Canvas.Left" Value="{Binding Path=XPosition}"/>
-                     <Setter Property="Canvas.Top" Value="{Binding Path=YPosition}"/>
-                  </Style>
-               </Rectangle.Style>
-            </Rectangle>
+
+         <!-- This is the place where the notes will float throuh -->
+         <Canvas x:Name="canvas" Grid.RowSpan="11" Grid.ColumnSpan="3">
+            <Ellipse x:Name="Note" Fill="Black" Height="37.543" Stroke="Black" Width="65.315" Canvas.Left="{Binding ActualWidth, ElementName=canvas, Mode=OneTime}" />
          </Canvas>
       </Grid>
 
       <!-- Score, input area, status, etc -->
+	  <StackPanel Grid.Row="2" Background="Blue">
+         <Button Click="OnStartClicked" Width="200" Height="75" VerticalAlignment="Center" HorizontalAlignment="Center" Style="{StaticResource TextButtonStyle}" Content="Start"/>
+	  </StackPanel>
+
    </Grid>
 </Page>
