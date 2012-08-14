@@ -3,3 +3,8 @@
 MusicNotes/MusicNotes/obj/*
 MusicNotes/MusicNotes/bin/*
 MusicNotes/*.suo
+
+MusicNotes/MusicNotes.UnitTests/obj/*
+MusicNotes/MusicNotes.UnitTests/bin/*
+
+MusicNotes/TestResults
