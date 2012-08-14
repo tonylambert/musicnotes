@@ -1,0 +1,4 @@
+# git ignore file
+
+MusicNotes/MusicNotes/obj/*
+MusicNotes/MusicNotes/bin/*
