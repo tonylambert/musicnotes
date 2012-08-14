@@ -8,3 +8,5 @@ MusicNotes/MusicNotes.UnitTests/obj/*
 MusicNotes/MusicNotes.UnitTests/bin/*
 
 MusicNotes/TestResults
+*.ncrunch*
+
