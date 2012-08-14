@@ -45,11 +45,11 @@
          <Canvas Grid.Row="9" Grid.ColumnSpan="3" Background="Black"/>
          <Canvas Grid.RowSpan="11" Grid.Column="1" Background="Blue"/>
          <Canvas Grid.RowSpan="11" Grid.ColumnSpan="3">
-            <Rectangle Width="10" Height="10" Fill="Red" Canvas.Left="300">
+            <Rectangle Width="10" Height="10" Fill="Red">
                <Rectangle.Style>
-                  <Style TargetType="Note">
-                     <Setter Property="Canvas.Left" Value="{Binding XPosition}"/>
-                     <Setter Property="Canvas.Top" Value="{Binding YPosition}"/>
+                  <Style TargetType="Rectangle">
+                     <Setter Property="Canvas.Left" Value="{Binding Path=XPosition}"/>
+                     <Setter Property="Canvas.Top" Value="{Binding Path=YPosition}"/>
                   </Style>
                </Rectangle.Style>
             </Rectangle>
