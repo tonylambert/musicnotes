@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace MusicNotes
 {
-    public enum NoteType
-    {
-        A,
-        B,
-        C,
-        D,
-        E,
-        F,
-        G,
-    }
+   public enum NoteType
+   {
+      A,
+      B,
+      C,
+      D,
+      E,
+      F,
+      G,
+   }
 }
