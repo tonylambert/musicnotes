@@ -8,13 +8,7 @@ namespace MusicNotes.UnitTests
 {
    public class InstrumentedGame : Game
    {
-      public InstrumentedGame( int currentNoteLocation, int speedOfNote )
-      {
-         _speedOfNote = speedOfNote;
-         _currentNoteLocation = currentNoteLocation;
-      }
-
-      public InstrumentedGame( int currentNoteLocation )
+      public InstrumentedGame( GameConfig gameConfig, int currentNoteLocation ) : base( gameConfig )
       {
          _currentNoteLocation = currentNoteLocation;
       }
