@@ -11,3 +11,5 @@ MusicNotes/TestResults
 *.ncrunch*
 
 MusicNotes/_NCrunch_MusicNotes/MusicNotes.crunchsolution.cache
+MusicNotes/_Resharper*
+
